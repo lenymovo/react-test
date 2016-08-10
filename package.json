@@ -1,0 +1,38 @@
+{
+  "name": "deming",
+  "version": "0.1.0",
+  "description": "проект по изучению gulp и react",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "demidenko denys",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-jquery": "^1.1.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-less": "^3.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-pngmin": "^0.1.4",
+    "gulp-prefix-css": "0.0.4",
+    "gulp-refresh": "^1.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-jqtmpl": "0.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifycss": "^1.0.6"
+  }
+}
