@@ -1,2 +1,4 @@
 node_modules/*
-build/*
+build/css/*
+build/img/*
+build/*.html
