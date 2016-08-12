@@ -26,6 +26,7 @@ var TestInput = React.createClass({
         likesIncreasing: nextProps.likeCount > this.props.likeCount
     });
   },
+  
 
   onBtnClickHandler: function() {
     console.log(this.refs);
