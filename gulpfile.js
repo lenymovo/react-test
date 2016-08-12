@@ -91,7 +91,7 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('image:build', function () {
+gulp.task('image', function () {
     gulp.src(path.src.img) 
         .pipe(imagemin({
             progressive: true,
@@ -112,8 +112,7 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
-    'fonts:build',
-    'image:build'
+    'fonts:build'
 ]);
 
 
@@ -128,10 +127,14 @@ gulp.task('watch', function(){
         gulp.start('js:build');
     });
     watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
+        gulp.start('image');
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+    watch([path.build.js], function(){
+        gulp.src(path.build.js)
+            .pipe(reload({stream: true}));
     });
 });
 
