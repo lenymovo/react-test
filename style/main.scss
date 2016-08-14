@@ -6,15 +6,50 @@ body{
 	background: linear-gradient(45deg, #ccc, #666);
 }
 
-h1{
-	color: darken($blue, 5%);
-}
-
-p{
-	color: blue;
-	font-weight: bold;
-}
 
 .none{
 	display: none;
+}
+
+.news article{
+	background: linear-gradient(transparent, lightblue);
+	margin: 10px;
+	padding: 10px;
+	position: relative;
+
+	.news__text{
+		text-transform: uppercase;
+		font-size: 16px;
+		color: blue;
+	}
+
+	.news__author{
+		position: absolute;
+		right: 10px;
+		bottom: -10px;
+		color: grey;
+	}
+
+	.news__author:before{
+		content: "Автор: ";
+	}
+}
+
+.news__count{
+	display: block;
+	padding-right: 10px;
+	text-align: right;
+}
+
+form.cf{
+	padding: 10px;
+
+	& > *{
+		display: block;
+		width: 99%; 
+		margin-bottom: 10px; }
+
+	& .add__text{ width: 98.6%; }
+
+	& .add__btn{ width: 99.5%; }
 }

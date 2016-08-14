@@ -77,7 +77,7 @@ var Article = React.createClass({
     return (
       <div>
         <p className="news__text">{this.props.data.text}:</p>
-        <p className="news__author">{this.props.data.author}:</p>
+        <p className="news__author">{this.props.data.author}</p>
         <a href="#" onClick={this.readmoreClick} className={'news__readmore '}>Подробнее</a>
         <p className={'news__big-text ' + (visible ? '': 'none')}>{this.props.data.bigText}</p>
       </div>
@@ -114,7 +114,7 @@ var News = React.createClass({
 
         return(
             <div className="news">
-                <h3>Новости</h3>
+                <h1>Новости</h1>
                 {newsTemplate}
                 <strong className={'news__count ' + (data.length > 0 ? '':'none') } 
                 onClick={ this.onTotalNewsClick }>
@@ -129,7 +129,7 @@ var Comments = React.createClass({
     render: function(){
         return (
             <div className="comments">
-                Нет новостей - комментировать нечего.
+                Комментариев нет.
             </div>
         );
     }
@@ -186,6 +186,8 @@ var Add = React.createClass({
 
     return (
       <form className='add cf'>
+
+        <h1> Добавьте новость </h1>
 
         <input
           type='text'
@@ -255,10 +257,9 @@ var App = React.createClass({
   render: function(){
     return (
       <div className="app">
-        <Add />
         <News data={this.state.news}/>
+        <Add />
         <Comments />
-        <TestInput />
       </div>
     );
   }
